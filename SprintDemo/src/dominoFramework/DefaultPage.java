@@ -25,9 +25,13 @@ public class DefaultPage {
 	
 	// Click Delivery Button
 	public static void clickDeliveryBtn() throws InterruptedException {
-		Thread.sleep(500);
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
 		checkOverlayClose();
-		Thread.sleep(500);
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
 		deliveryBtn().click();
 	}
 	
@@ -49,7 +53,9 @@ public class DefaultPage {
 	}
 
 	public static void clickCarryoutBtn() throws InterruptedException {
-		Thread.sleep(500);
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
 		carryoutBtn().click();
 	}
 	
@@ -61,17 +67,66 @@ public class DefaultPage {
 	}
 
 	public static void clickSignInandEarnBtn() throws InterruptedException {
-		Thread.sleep(500);
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
 		signInandEarnBtn().click();
 	}
-	
-	/*Returns the Profile Creation element
-	*/
-	public static WebElement ProfileCreationLink() {
-		element = driver.findElement(By.id(""));
+
+	public static WebElement createOneLink() {
+		element = driver.findElement(By.xpath("//a[@class='site-nav__profile__create-account js-createProfile c-header-create-profile']"));
 		return element;
 	}
 
+	public static void clickCreateOneLink() throws InterruptedException {
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
+		createOneLink().click();
+		//OpenLinks.openNewWindow(createOneLink());
+	}
+
+	public static void clickCreateOneLinkNewWindow() throws InterruptedException {
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
+		OpenLinks.openNewWindow(createOneLink());
+	}
+
+	public static void clickCreateOneLinkNewTab() throws InterruptedException {
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
+		OpenLinks.openNewTab(createOneLink());
+	}
+
+	public static void fillCreateOneForm() throws InterruptedException {
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
+		element = driver.findElement(By.id("First_Name"));
+		driver.findElement(By.id("First_Name")).sendKeys("Bob");
+		element = driver.findElement(By.id("Last_Name"));
+		element = driver.findElement(By.id("Email"));
+		element = driver.findElement(By.id("Confirm_Email"));
+		element = driver.findElement(By.id("Phone"));
+		element = driver.findElement(By.id("Create_Password"));
+		element = driver.findElement(By.id("Confirm_Password"));
+
+		/*		
+		<input type="text" id="First_Name" name="First_Name" maxlength="40" class="grid__cell--1 grid__cell--3/5@desktop grid__cell--4/5@kiosk c-customerprofile-firstname js-profileFirstName" value="">
+		<input type="text" id="Last_Name" name="Last_Name" maxlength="40" class="grid__cell--1 grid__cell--3/5@desktop grid__cell--4/5@kiosk c-customerprofile-lastname js-profileLastName" value="">
+		<input type="email" id="Email" name="Email" maxlength="100" class="form__input--block js-email c-customerprofile-email" value="">
+		<input type="email" id="Confirm_Email" name="Confirm_Email" maxlength="100" class="form__input--block js-confirmEmail c-customerprofile-confirmemail" value="">
+		<input type="tel" id="Phone" name="Phone" maxlength="14" placeholder="Phone" class="grid__cell--3/5 js-phone c-customerprofile-phone" value="" data-error-classes="grid__cell grid__cell--1 customerprofile--error--phone">
+		<input type="password" id="Create_Password" name="Create_Password" maxlength="40" class="grid__cell--3/5@desktop grid__cell--1 c-customerprofile-createpassword">
+		<input type="password" id="Confirm_Password" name="Confirm_Password" maxlength="40" class="grid__cell--3/5@desktop js-confirmPassword grid__cell--1 c-customerprofile-confirmpassword">
+		<input type="checkbox" data-dpz-track-evt-name="Rewards Opt In Checkbox" class="checkbox js-loyaltyOptIn profile--create__loyalty-enroll--checkbox" id="Loyalty_Opt_In" name="Loyalty_Opt_In">
+		<input type="checkbox" class="checkbox js-emailOptIn c-customerprofile-emailoptin" id="Email_Opt_In" checked="" name="Email_Opt_In">
+		<button class="btn profile--create__cta c-customerprofile-createyourprofile" type="submit"> <span>  Create Your Profile  </span> </button>
+*/		
+	}
+	
 	/*Returns Order Now button(s)
 	 * 
 	*/

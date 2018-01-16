@@ -18,6 +18,7 @@ public class DefaultPageTest {
 	private String baseURL;
 	private DefaultPage homePage;
 	private OpenLinks openLinks;
+	public static final boolean WAIT = true; 
 /*		
 Setup Test information, set Chrome driver location, baseURL, and browser properties for driver.
 
@@ -33,7 +34,7 @@ Setup Test information, set Chrome driver location, baseURL, and browser propert
 		
 		// Maximize the browser's window
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
 /*
@@ -43,10 +44,14 @@ Setup Test information, set Chrome driver location, baseURL, and browser propert
 	public void ClickSideTopCoupon() throws InterruptedException {
 		driver.get(baseURL);
 
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 		DefaultPage.clickSideTop();
 		OpenLinks.goBackPage();		
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
 /*
 	Click the main coupon button and then return to the default page.
@@ -55,10 +60,14 @@ Setup Test information, set Chrome driver location, baseURL, and browser propert
 	public void ClickSideBottomCoupon() throws InterruptedException {
 		driver.get(baseURL);
 
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 		DefaultPage.clickSideBottom();
 		OpenLinks.goBackPage();		
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
 	/*
 	Click the main coupon button and then return to the default page.
@@ -67,10 +76,14 @@ Setup Test information, set Chrome driver location, baseURL, and browser propert
 	public void ClickMainCoupon() throws InterruptedException {
 		driver.get(baseURL);
 
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 		DefaultPage.clickMainCoupon();
 		OpenLinks.goBackPage();		
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
 /*
 Click the Delivery button and return to default page.
@@ -78,7 +91,11 @@ Click the Delivery button and return to default page.
 	@Test 
 	public void ClickDeliveryButton() throws InterruptedException {
 		driver.get(baseURL);
-		Thread.sleep(5000);
+		OpenLinks.waitForLoad();
+
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		
@@ -86,10 +103,15 @@ Click the Delivery button and return to default page.
 		assertEquals("https://www.dominos.com/en/pages/order/#/locations/search/?type=Delivery", driver.getCurrentUrl());
 		
 		OpenLinks.goBackPage();
+		OpenLinks.waitForLoad();
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
+	
+
 /*
 	Click the Carry Out button and return to default page.
 	
@@ -97,7 +119,10 @@ Click the Delivery button and return to default page.
 	@Test
 	public void ClickCarryOutButton() throws InterruptedException {
 		driver.get(baseURL);
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 
 		DefaultPage.clickCarryoutBtn();
@@ -105,23 +130,94 @@ Click the Delivery button and return to default page.
 
 		OpenLinks.goBackPage();
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
 /*
 Click Sign in and earn button, popup will appear and need to be dealt with.	
 
 */
+
 	@Test
 	public void ClickSignInandEarn() throws InterruptedException {
 		driver.get(baseURL);
-		Thread.sleep(5000);
-
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+	
 		DefaultPage.clickSignInandEarnBtn();
 		//OpenLinks.goBackPage(); // Doesn't work since it's a popup
 		// Need to close the PopUp instead of going back.
 		
-		Thread.sleep(5000);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
 	}
+/*
+Click Create One Link to go to create Pizza Profile page	
+
+*/
+	@Test
+	public void ClickCreateOneLink() throws InterruptedException {
+		driver.get(baseURL);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+
+		DefaultPage.clickCreateOneLink();
+		DefaultPage.fillCreateOneForm();
+		
+		//OpenLinks.goBackPage(); // Doesn't work since it's a popup
+		// Need to close the PopUp instead of going back.
+		
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+	}
+
+/*
+Click Create One Link to go to create Pizza Profile page	
+
+*/
+	@Test
+	public void ClickCreateOneLinkNewWindow() throws InterruptedException {
+		driver.get(baseURL);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+
+		DefaultPage.clickCreateOneLinkNewWindow();
+		
+		//OpenLinks.goBackPage(); // Doesn't work since it's a popup
+		// Need to close the PopUp instead of going back.
+		
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+	}
+
+/*
+Click Create One Link to go to create Pizza Profile page	
+
+*/
+	@Test
+	public void ClickCreateOneLinkNewTab() throws InterruptedException {
+		driver.get(baseURL);
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+
+		DefaultPage.clickCreateOneLinkNewTab();
+		
+		//OpenLinks.goBackPage(); // Doesn't work since it's a popup
+		// Need to close the PopUp instead of going back.
+		
+		if (WAIT) {
+			Thread.sleep(5000);
+		}
+	}
+
 /*
 Quit the automated browser.
 	
