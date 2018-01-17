@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="dominoFramework.DefaultPageTest(failed)" parallel="methods">
+    <classes>
+      <class name="dominoFramework.DefaultPageTest">
+        <methods>
+          <include name="ClickDeliveryButton"/>
+          <include name="ClickCarryOutButton"/>
+          <include name="setupTest"/>
+          <include name="ClickSideTopCoupon"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- dominoFramework.DefaultPageTest -->
+    </classes>
+  </test> <!-- dominoFramework.DefaultPageTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

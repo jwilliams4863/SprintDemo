@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25027" started-at="2018-01-17T00:40:20Z" finished-at="2018-01-17T00:40:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25027" started-at="2018-01-17T00:40:20Z" finished-at="2018-01-17T00:40:45Z">
+      <class name="dominoFramework.DefaultPageTest">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="setupTest" is-config="true" duration-ms="4247" started-at="2018-01-16T19:40:20Z" finished-at="2018-01-16T19:40:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickCreateOneLinkNewTab()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="ClickCreateOneLinkNewTab" duration-ms="20118" started-at="2018-01-16T19:40:24Z" finished-at="2018-01-16T19:40:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickCreateOneLinkNewTab -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="tearDown" is-config="true" duration-ms="636" started-at="2018-01-16T19:40:44Z" finished-at="2018-01-16T19:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- dominoFramework.DefaultPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,5 +1,6 @@
 package seleniumGeneralFunctions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -151,5 +152,15 @@ public class OpenLinks {
 		if (DefaultPageTest.WAIT) {
 			Thread.sleep(5000);
 		}
+	}
+	
+	public static void fillTextBoxID(String ID, String contents) throws InterruptedException {
+		if (DefaultPageTest.WAIT) {
+			Thread.sleep(5000);
+		}
+		// Clear any contents that may be in the box
+		driver.findElement(By.id(ID)).clear();
+		driver.findElement(By.id(ID)).sendKeys(contents);
+
 	}
 }

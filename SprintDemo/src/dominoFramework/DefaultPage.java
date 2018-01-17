@@ -104,14 +104,14 @@ public class DefaultPage {
 		if (DefaultPageTest.WAIT) {
 			Thread.sleep(5000);
 		}
-		element = driver.findElement(By.id("First_Name"));
 		driver.findElement(By.id("First_Name")).sendKeys("Bob");
-		element = driver.findElement(By.id("Last_Name"));
-		element = driver.findElement(By.id("Email"));
-		element = driver.findElement(By.id("Confirm_Email"));
-		element = driver.findElement(By.id("Phone"));
-		element = driver.findElement(By.id("Create_Password"));
-		element = driver.findElement(By.id("Confirm_Password"));
+		driver.findElement(By.id("Last_Name")).sendKeys("McDuck");
+		driver.findElement(By.id("Email")).sendKeys("invalid.email.address.com");
+		driver.findElement(By.id("Confirm_Email")).sendKeys("mistyped.email.com");
+		driver.findElement(By.id("Phone")).sendKeys("555555555");
+		driver.findElement(By.id("Create_Password")).sendKeys("Four");
+		driver.findElement(By.id("Confirm_Password")).sendKeys("Five");
+		driver.findElement(By.xpath("//button[@class='btn profile--create__cta c-customerprofile-createyourprofile']")).click();
 
 		/*		
 		<input type="text" id="First_Name" name="First_Name" maxlength="40" class="grid__cell--1 grid__cell--3/5@desktop grid__cell--4/5@kiosk c-customerprofile-firstname js-profileFirstName" value="">

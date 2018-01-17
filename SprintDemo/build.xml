@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="SprintDemo">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="JUnit 5.libraryclasspath">
+        <pathelement location="../../../.p2/pool/plugins/org.junit.jupiter.api_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.jupiter.engine_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.jupiter.migrationsupport_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.jupiter.params_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.platform.commons_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.platform.engine_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.platform.launcher_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.platform.runner_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.platform.suite.api_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit.vintage.engine_4.12.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.opentest4j_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.apiguardian_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="../../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="Maven Dependencies.libraryclasspath"/>
+    <path id="SprintDemo.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/byte-buddy-1.7.5.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/commons-codec-1.10.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/commons-exec-1.3.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/commons-logging-1.2.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/gson-2.8.2.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/guava-23.0.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/httpclient-4.5.3.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/libs/httpcore-4.4.6.jar"/>
+        <pathelement location="D:/Selenium/selenium-java-3.8.1/client-combined-3.8.1.jar"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageHover.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.HoverMainCoupon.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickMainCoupon.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickDeliveryButton.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickCarryOutButton.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickSignInandEarnNewWindow.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickCreateOneLink.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickCreateOneLinkNewWindow.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DefaultPageTest.ClickCreateOneLinkNewTab.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.VersionCheck.classpath">
+        <path refid="SprintDemo.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="SprintDemo.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="DefaultPageTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageHover">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageHover" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageHover.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.HoverMainCoupon">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.HoverMainCoupon.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickMainCoupon">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickMainCoupon.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickDeliveryButton">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickDeliveryButton.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickCarryOutButton">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickCarryOutButton.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickSignInandEarnNewWindow">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickSignInandEarnNewWindow.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickCreateOneLink">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickCreateOneLink.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickCreateOneLinkNewWindow">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickCreateOneLinkNewWindow.classpath"/>
+        </junit>
+    </target>
+    <target name="DefaultPageTest.ClickCreateOneLinkNewTab">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="dominoFramework.DefaultPageTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DefaultPageTest.ClickCreateOneLinkNewTab.classpath"/>
+        </junit>
+    </target>
+    <target name="VersionCheck">
+        <java classname="dominoFramework.VersionCheck" failonerror="true" fork="yes">
+            <classpath refid="run.VersionCheck.classpath"/>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
