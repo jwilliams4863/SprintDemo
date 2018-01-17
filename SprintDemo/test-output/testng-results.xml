@@ -1,25 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25027" started-at="2018-01-17T00:40:20Z" finished-at="2018-01-17T00:40:45Z">
+  <suite name="Default suite" duration-ms="136909" started-at="2018-01-17T18:33:31Z" finished-at="2018-01-17T18:35:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25027" started-at="2018-01-17T00:40:20Z" finished-at="2018-01-17T00:40:45Z">
-      <class name="dominoFramework.DefaultPageTest">
-        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="setupTest" is-config="true" duration-ms="4247" started-at="2018-01-16T19:40:20Z" finished-at="2018-01-16T19:40:24Z">
+    <test name="Default test" duration-ms="136909" started-at="2018-01-17T18:33:31Z" finished-at="2018-01-17T18:35:48Z">
+      <class name="dominoFramework.test.DefaultPageTest">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="4208" started-at="2018-01-17T13:33:31Z" finished-at="2018-01-17T13:33:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="ClickCreateOneLinkNewTab()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="ClickCreateOneLinkNewTab" duration-ms="20118" started-at="2018-01-16T19:40:24Z" finished-at="2018-01-16T19:40:44Z">
+        <test-method status="PASS" signature="ClickCarryOutButton()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickCarryOutButton" duration-ms="10848" started-at="2018-01-17T13:33:35Z" finished-at="2018-01-17T13:33:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickCreateOneLinkNewTab -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.DefaultPageTest@64bfbc86]" name="tearDown" is-config="true" duration-ms="636" started-at="2018-01-16T19:40:44Z" finished-at="2018-01-16T19:40:45Z">
+        </test-method> <!-- ClickCarryOutButton -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="627" started-at="2018-01-17T13:33:46Z" finished-at="2018-01-17T13:33:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- dominoFramework.DefaultPageTest -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="2861" started-at="2018-01-17T13:33:47Z" finished-at="2018-01-17T13:33:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickCreateOneLink()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickCreateOneLink" duration-ms="15231" started-at="2018-01-17T13:33:50Z" finished-at="2018-01-17T13:34:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickCreateOneLink -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="616" started-at="2018-01-17T13:34:05Z" finished-at="2018-01-17T13:34:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="3538" started-at="2018-01-17T13:34:06Z" finished-at="2018-01-17T13:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickCreateOneLinkNewTab()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickCreateOneLinkNewTab" duration-ms="8120" started-at="2018-01-17T13:34:09Z" finished-at="2018-01-17T13:34:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickCreateOneLinkNewTab -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="608" started-at="2018-01-17T13:34:17Z" finished-at="2018-01-17T13:34:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="3651" started-at="2018-01-17T13:34:18Z" finished-at="2018-01-17T13:34:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickCreateOneLinkNewWindow()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickCreateOneLinkNewWindow" duration-ms="8137" started-at="2018-01-17T13:34:22Z" finished-at="2018-01-17T13:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickCreateOneLinkNewWindow -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="662" started-at="2018-01-17T13:34:30Z" finished-at="2018-01-17T13:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="2988" started-at="2018-01-17T13:34:30Z" finished-at="2018-01-17T13:34:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickDeliveryButton()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickDeliveryButton" duration-ms="13532" started-at="2018-01-17T13:34:33Z" finished-at="2018-01-17T13:34:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickDeliveryButton -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="628" started-at="2018-01-17T13:34:47Z" finished-at="2018-01-17T13:34:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="3419" started-at="2018-01-17T13:34:47Z" finished-at="2018-01-17T13:34:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickMainCoupon()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickMainCoupon" duration-ms="10234" started-at="2018-01-17T13:34:51Z" finished-at="2018-01-17T13:35:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickMainCoupon -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="612" started-at="2018-01-17T13:35:01Z" finished-at="2018-01-17T13:35:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="3011" started-at="2018-01-17T13:35:02Z" finished-at="2018-01-17T13:35:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickSideBottomCoupon()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickSideBottomCoupon" duration-ms="17459" started-at="2018-01-17T13:35:05Z" finished-at="2018-01-17T13:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickSideBottomCoupon -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="624" started-at="2018-01-17T13:35:22Z" finished-at="2018-01-17T13:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="3493" started-at="2018-01-17T13:35:23Z" finished-at="2018-01-17T13:35:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickSideTopCoupon()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickSideTopCoupon" duration-ms="11512" started-at="2018-01-17T13:35:26Z" finished-at="2018-01-17T13:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickSideTopCoupon -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="633" started-at="2018-01-17T13:35:38Z" finished-at="2018-01-17T13:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="setupTest" is-config="true" duration-ms="2871" started-at="2018-01-17T13:35:38Z" finished-at="2018-01-17T13:35:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="ClickSignInandEarn()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="ClickSignInandEarn" duration-ms="6134" started-at="2018-01-17T13:35:41Z" finished-at="2018-01-17T13:35:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickSignInandEarn -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dominoFramework.test.DefaultPageTest@64bf3bbf]" name="tearDown" is-config="true" duration-ms="615" started-at="2018-01-17T13:35:47Z" finished-at="2018-01-17T13:35:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- dominoFramework.test.DefaultPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

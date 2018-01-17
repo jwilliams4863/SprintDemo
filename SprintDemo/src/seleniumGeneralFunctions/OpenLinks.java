@@ -9,20 +9,32 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import dominoFramework.DefaultPageTest;
-
 public class OpenLinks {
-	static WebDriver driver;
+	protected static WebDriver driver;
 	public static WebElement element = null;
 	static JavascriptExecutor jse;
+	private static int waittime = 5000;
+
 /*
 	Constructor
 */
-	public OpenLinks(WebDriver driver){
-		OpenLinks.driver = driver;
+	public OpenLinks(){
 		jse = (JavascriptExecutor)OpenLinks.driver;
 	}
 	
+	public static int getWaittime() {
+		return waittime;
+	}
+
+	public static void setWaittime(int waittime) {
+		OpenLinks.waittime = waittime;
+	}
+
+
+	public static void WaitFor () throws InterruptedException {
+		Thread.sleep(getWaittime());
+	}
+
 /*
 	Wait for the page to finish loading.
 	
@@ -46,9 +58,8 @@ public class OpenLinks {
 		Actions newwindow = new Actions(driver);
 		
 		newwindow.keyDown(Keys.SHIFT).click(link).keyUp(Keys.SHIFT).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+
+		WaitFor();
 	}
 		
 /*	
@@ -58,9 +69,7 @@ public class OpenLinks {
 		Actions newtab = new Actions(driver);
 		
 		newtab.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 	
 /*	
@@ -70,9 +79,7 @@ public class OpenLinks {
 		Actions newtab = new Actions(driver);
 		
 		newtab.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 
 /*	
@@ -83,9 +90,7 @@ public class OpenLinks {
 		Actions newtab = new Actions(driver);
 		
 		newtab.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 /*	
 	Resize Window
@@ -94,9 +99,7 @@ public class OpenLinks {
 		Actions newtab = new Actions(driver);
 		
 		newtab.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 /*	
 	Scroll Window
@@ -113,9 +116,7 @@ public class OpenLinks {
 			//Received an invalid direction, how do I handle this?  **FIX**
 		}
 
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 	
 /*	
@@ -125,21 +126,15 @@ public class OpenLinks {
 		Actions newtab = new Actions(driver);
 		
 		newtab.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).build().perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 /*
 	Navigate back one page in history	
 */	
 	public static void goBackPage() throws InterruptedException {
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 		jse.executeScript("window.history.go(-1)");
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 
 /*
@@ -149,15 +144,11 @@ public class OpenLinks {
 
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 	}
 	
 	public static void fillTextBoxID(String ID, String contents) throws InterruptedException {
-		if (DefaultPageTest.WAIT) {
-			Thread.sleep(5000);
-		}
+		WaitFor();
 		// Clear any contents that may be in the box
 		driver.findElement(By.id(ID)).clear();
 		driver.findElement(By.id(ID)).sendKeys(contents);

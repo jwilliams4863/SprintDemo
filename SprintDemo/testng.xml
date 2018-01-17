@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <!-- <suite name="Suite" parallel="methods" thread-count="5"> -->
 <suite name="Suite" parallel="tests" thread-count="3">
-  <test name="dominoFramework.DefaultPageTest" parallel="methods" thread-count="4">
+  <test name="dominoFramework.test.DefaultPageTest" parallel="methods" thread-count="4">
     <classes>
-      <class name="dominoFramework.DefaultPageTest">
+      <class name="dominoFramework.test.DefaultPageTest">
       	<methods>
       		<include name="ClickCarryOutButton" />
       		<include name="CLickMainCoupon" />
