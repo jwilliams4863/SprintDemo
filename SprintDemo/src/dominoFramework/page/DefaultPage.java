@@ -3,176 +3,117 @@ package dominoFramework.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
 import seleniumGeneralFunctions.TestBase;
 
 public class DefaultPage extends TestBase {
 
-//	static WebDriver driver;
-	public static WebElement element = null;
-	
-	public DefaultPage(WebDriver driver) {
-		DefaultPage.driver = driver;	
-	}
+	@FindBy(how=How.XPATH, using = "//a[@data-quid='start-your-order-delivery']")
+	private static WebElement deliveryBtn;
 
-	/*Returns the Delivery Button element
-	*/
-	public static WebElement deliveryBtn() {
-		waitForLoad();
+	@FindBy(how=How.XPATH, using = "//a[@class='card--overlay__close js-close-button']")
+	private static WebElement defaultOverlay;
 
-		element = driver.findElement(By.xpath("//a[@data-quid='start-your-order-delivery']"));
-		return element;
-	}
+	@FindBy(how=How.XPATH, using = "//a[@data-quid='start-your-order-carryout']")
+	private static WebElement carryoutBtn;
+
+	@FindBy(how=How.XPATH, using = "//a[@class='site-nav__profile__sign-in js-login c-header-customer-login site-nav__profile__sign-in--loyalty']")
+	private static WebElement signInandEarnBtn;
+
+	@FindBy(how=How.XPATH, using = "//a[@class='site-nav__profile__create-account js-createProfile c-header-create-profile']")
+	private static WebElement createOneLink;
+
+	@FindBy(how=How.XPATH, using = "//button[@data-quid='btn-599mixmatch']")
+	private static WebElement mainCouponBtn;
+
+	@FindBy(how=How.XPATH, using = "//button[@data-quid='btn-Side899Pan']")
+	private static WebElement sideTopBtn;
 	
+/*	@FindBy(how=How.XPATH, using = "//button[@data-quid='btn-WeekLongCarryoutSide']")
+	private static WebElement sideBottomBtn;
+*/
+	@FindBy(how=How.NAME, using = "btn-WeekLongCarryoutSide")
+	private static WebElement sideBottomBtn;
+
 	// Click Delivery Button
-	public static void clickDeliveryBtn() throws InterruptedException {
-		WaitFor();
+	public void clickDeliveryBtn() throws InterruptedException {
 		checkOverlayClose();
+
 		WaitFor();
-		deliveryBtn().click();
+		deliveryBtn.click();
 	}
 	
 	// This needs to check to make sure the element exists and is visible otherwise it will return a failure in the test.  **FIX**
-	public static void checkOverlayClose() {
+	public void checkOverlayClose() {
 		// Check to see if the element is present and visible so it can be clicked on without causing a failure.
-		waitForLoad();
-
-		if((driver.findElement(By.xpath("//a[@class='card--overlay__close js-close-button']")) != null) &&
-		   (driver.findElement(By.xpath("//a[@class='card--overlay__close js-close-button']")).isDisplayed())) {
-			element = driver.findElement(By.xpath("//a[@class='card--overlay__close js-close-button']"));
-			element.click();
-		}
+		if((defaultOverlay != null) && (defaultOverlay.isDisplayed())) {
+					defaultOverlay.click();
+					System.out.println("Overlay closed");
+				}
 	}
 	
-	/*Returns the carry-out button element
-	*/
-	public static WebElement carryoutBtn() {
-		waitForLoad();
-
-		element = driver.findElement(By.xpath("//a[@data-quid='start-your-order-carryout']"));
-		return element;
-	}
-
-	public static void clickCarryoutBtn() throws InterruptedException {
+// Click Carry Out Button
+	public void clickCarryoutBtn() throws InterruptedException {
 		WaitFor();
-		carryoutBtn().click();
+		carryoutBtn.click();
 	}
 	
-	/*Returns the Sign in and Earn Rewards element
-	*/
-	public static WebElement signInandEarnBtn() {
-		waitForLoad();
 
-		element = driver.findElement(By.xpath("//a[@class='site-nav__profile__sign-in js-login c-header-customer-login site-nav__profile__sign-in--loyalty']"));
-		return element;
-	}
-
-	public static void clickSignInandEarnBtn() throws InterruptedException {
+	public void clickSignInandEarnBtn() throws InterruptedException {
 		WaitFor();
-		signInandEarnBtn().click();
+		signInandEarnBtn.click();
 	}
 
-	public static WebElement createOneLink() {
-		waitForLoad();
 
-		element = driver.findElement(By.xpath("//a[@class='site-nav__profile__create-account js-createProfile c-header-create-profile']"));
-		return element;
-	}
-
-	public static void clickCreateOneLink() throws InterruptedException {
+	public void clickCreateOneLink() throws InterruptedException {
 		WaitFor();
-		createOneLink().click();
-		//OpenLinks.openNewWindow(createOneLink());
+		createOneLink.click();
 	}
 
-	public static void clickCreateOneLinkNewWindow() throws InterruptedException {
+	public void clickCreateOneLinkNewWindow() throws InterruptedException {
 		WaitFor();
-		openNewWindow(createOneLink());
+		openNewWindow(createOneLink);
 	}
 
-	public static void clickCreateOneLinkNewTab() throws InterruptedException {
+	public void clickCreateOneLinkNewTab() throws InterruptedException {
 		WaitFor();
-
-		openNewTab(createOneLink());
+		openNewTab(createOneLink);
 	}
 
-	public static void fillCreateOneForm() throws InterruptedException {
-		WaitFor();
+
+	public void hoverMainCoupon() throws InterruptedException {
 		waitForLoad();
-
-		driver.findElement(By.id("First_Name")).sendKeys("Bob");
-		driver.findElement(By.id("Last_Name")).sendKeys("McDuck");
-		driver.findElement(By.id("Email")).sendKeys("invalid.email.address.com");
-		driver.findElement(By.id("Confirm_Email")).sendKeys("mistyped.email.com");
-		driver.findElement(By.id("Phone")).sendKeys("555555555");
-		driver.findElement(By.id("Create_Password")).sendKeys("Four");
-		driver.findElement(By.id("Confirm_Password")).sendKeys("Five");
-		driver.findElement(By.xpath("//button[@class='btn profile--create__cta c-customerprofile-createyourprofile']")).click();
-
-		/*		
-		<input type="text" id="First_Name" name="First_Name" maxlength="40" class="grid__cell--1 grid__cell--3/5@desktop grid__cell--4/5@kiosk c-customerprofile-firstname js-profileFirstName" value="">
-		<input type="text" id="Last_Name" name="Last_Name" maxlength="40" class="grid__cell--1 grid__cell--3/5@desktop grid__cell--4/5@kiosk c-customerprofile-lastname js-profileLastName" value="">
-		<input type="email" id="Email" name="Email" maxlength="100" class="form__input--block js-email c-customerprofile-email" value="">
-		<input type="email" id="Confirm_Email" name="Confirm_Email" maxlength="100" class="form__input--block js-confirmEmail c-customerprofile-confirmemail" value="">
-		<input type="tel" id="Phone" name="Phone" maxlength="14" placeholder="Phone" class="grid__cell--3/5 js-phone c-customerprofile-phone" value="" data-error-classes="grid__cell grid__cell--1 customerprofile--error--phone">
-		<input type="password" id="Create_Password" name="Create_Password" maxlength="40" class="grid__cell--3/5@desktop grid__cell--1 c-customerprofile-createpassword">
-		<input type="password" id="Confirm_Password" name="Confirm_Password" maxlength="40" class="grid__cell--3/5@desktop js-confirmPassword grid__cell--1 c-customerprofile-confirmpassword">
-		<input type="checkbox" data-dpz-track-evt-name="Rewards Opt In Checkbox" class="checkbox js-loyaltyOptIn profile--create__loyalty-enroll--checkbox" id="Loyalty_Opt_In" name="Loyalty_Opt_In">
-		<input type="checkbox" class="checkbox js-emailOptIn c-customerprofile-emailoptin" id="Email_Opt_In" checked="" name="Email_Opt_In">
-		<button class="btn profile--create__cta c-customerprofile-createyourprofile" type="submit"> <span>  Create Your Profile  </span> </button>
-*/		
-	}
-	
-	/*Returns Order Now button(s)
-	 * 
-	*/
-	public static WebElement orderNowBtn() {
-		waitForLoad();
-		element = driver.findElement(By.id("btn-599mixmatch"));
-		return element;
-	}
-
-	public static void hoverMainCoupon() throws InterruptedException {
-		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-599mixmatch']"));
-
-		hoverOver(element);
-	}
-
-	public static void clickMainCoupon() throws InterruptedException {
-		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-599mixmatch']"));
-		hoverOver(element);
-		element.click();
 		
+		hoverOver(mainCouponBtn);
+	}
+
+	public void clickMainCoupon() throws InterruptedException {
+		waitForLoad();
+
+		mainCouponBtn.click();
 	}	
 	
-	public static void hoverSideTop() throws InterruptedException {
+	public void hoverSideTop() throws InterruptedException {
 		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-Side899Pan']"));
 
-		hoverOver(element);
+		hoverOver(sideTopBtn);
 	}
 
-	public static void clickSideTop() throws InterruptedException {
+	public void clickSideTop() throws InterruptedException {
 		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-Side899Pan']"));
-		hoverOver(element);
-		element.click();
-		
+		sideTopBtn.click();
 	}
 	
-	public static void hoverSideBottom() throws InterruptedException {
+	public void hoverSideBottom() throws InterruptedException {
 		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-WeekLongCarryoutSide']"));
-
-		hoverOver(element);
+		hoverOver(sideBottomBtn);
 	}
 
-	public static void clickSideBottom() throws InterruptedException {
+	public void clickSideBottom() throws InterruptedException {
 		waitForLoad();
-		element = driver.findElement(By.xpath("//button[@data-quid='btn-WeekLongCarryoutSide']"));
-		hoverOver(element);
-		element.click();
+		sideBottomBtn.click();
 		
 	}
 		

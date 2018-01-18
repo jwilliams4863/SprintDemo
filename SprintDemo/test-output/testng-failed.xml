@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="dominoFramework.test.DefaultPageTest(failed)" parallel="methods">
     <classes>
       <class name="dominoFramework.test.DefaultPageTest">
         <methods>
+          <include name="ClickCarryOutButton"/>
           <include name="ClickSideTopCoupon"/>
           <include name="tearDown"/>
-          <include name="ClickSideBottomCoupon"/>
+          <include name="init"/>
+          <include name="ClickDeliveryButton"/>
           <include name="setupTest"/>
-          <include name="ClickMainCoupon"/>
         </methods>
       </class> <!-- dominoFramework.test.DefaultPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- dominoFramework.test.DefaultPageTest(failed) -->
+  <test name="dominoFramework.test.CreatePizzaProfileTest(failed)" parallel="methods">
+    <classes>
+      <class name="dominoFramework.test.CreatePizzaProfileTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="enterFirstName"/>
+          <include name="enterEmail"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- dominoFramework.test.CreatePizzaProfileTest -->
+    </classes>
+  </test> <!-- dominoFramework.test.CreatePizzaProfileTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

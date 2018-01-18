@@ -4,3 +4,5 @@
 [0116/124518.671:ERROR:process_info.cc(632)] range at 0x10a63cbc00000000, size 0x2c5 fully unreadable
 [0116/124518.671:ERROR:process_info.cc(632)] range at 0x10a63d1e00000000, size 0x2c5 fully unreadable
 [0116/124518.671:ERROR:process_info.cc(632)] range at 0x0, size 0x2c5 fully unreadable
+[0117/191837.118:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0117/192117.474:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports

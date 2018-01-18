@@ -7,11 +7,25 @@
         <methods>
           <include name="ClickCarryOutButton"/>
           <include name="ClickSideTopCoupon"/>
-          <include name="setupTest"/>
-          <include name="ClickDeliveryButton"/>
           <include name="tearDown"/>
+          <include name="init"/>
+          <include name="ClickDeliveryButton"/>
+          <include name="setupTest"/>
         </methods>
       </class> <!-- dominoFramework.test.DefaultPageTest -->
     </classes>
   </test> <!-- dominoFramework.test.DefaultPageTest(failed) -->
+  <test name="dominoFramework.test.CreatePizzaProfileTest(failed)" parallel="methods">
+    <classes>
+      <class name="dominoFramework.test.CreatePizzaProfileTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="enterFirstName"/>
+          <include name="enterEmail"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- dominoFramework.test.CreatePizzaProfileTest -->
+    </classes>
+  </test> <!-- dominoFramework.test.CreatePizzaProfileTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

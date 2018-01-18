@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\jwill\AppData\Local\Temp\testng-eclipse-821440595\testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\jwill\git\SprintDemo\SprintDemo\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,61 +91,60 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">7 methods, 5 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickCarryOutButton">ClickCarryOutButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickDeliveryButton">ClickDeliveryButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickSideTopCoupon">ClickSideTopCoupon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.CreatePizzaProfileTest" hash-for-method="enterEmail">enterEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.CreatePizzaProfileTest" hash-for-method="enterFirstName">enterFirstName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickCarryOutButton">ClickCarryOutButton</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickMainCoupon">ClickMainCoupon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickCreateOneLink">ClickCreateOneLink</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="dominoFramework.test.CreatePizzaProfileTest" hash-for-method="enterBothEmailFields">enterBothEmailFields</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickCreateOneLinkNewTab">ClickCreateOneLinkNewTab</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickCreateOneLinkNewWindow">ClickCreateOneLinkNewWindow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickDeliveryButton">ClickDeliveryButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickMainCoupon">ClickMainCoupon</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickSideBottomCoupon">ClickSideBottomCoupon</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickSideTopCoupon">ClickSideTopCoupon</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="dominoFramework.test.DefaultPageTest" hash-for-method="ClickSignInandEarn">ClickSignInandEarn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -156,10 +155,46 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">dominoFramework.test.CreatePizzaProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterEmail">
+                  </a> <!-- enterEmail -->
+                  <span class="method-name">enterEmail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;That email is totally wrong and so is this.&gt; but was:&lt;Please enter a valid email address.&gt;
+	at dominoFramework.test.CreatePizzaProfileTest.enterEmail(CreatePizzaProfileTest.java:62)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterFirstName">
+                  </a> <!-- enterFirstName -->
+                  <span class="method-name">enterFirstName</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;Bob&gt; but was:&lt;&gt;
+	at dominoFramework.test.CreatePizzaProfileTest.enterFirstName(CreatePizzaProfileTest.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">dominoFramework.test.DefaultPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -168,27 +203,34 @@
                   <a name="ClickCarryOutButton">
                   </a> <!-- ClickCarryOutButton -->
                   <span class="method-name">ClickCarryOutButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickCreateOneLink">
-                  </a> <!-- ClickCreateOneLink -->
-                  <span class="method-name">ClickCreateOneLink</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickCreateOneLinkNewTab">
-                  </a> <!-- ClickCreateOneLinkNewTab -->
-                  <span class="method-name">ClickCreateOneLinkNewTab</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickCreateOneLinkNewWindow">
-                  </a> <!-- ClickCreateOneLinkNewWindow -->
-                  <span class="method-name">ClickCreateOneLinkNewWindow</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a class=&quot;btn btn--carryout js-carryout&quot; href=&quot;/en/pages/order/#/locations/search/&quot; data-method=&quot;...&quot; data-quid=&quot;start-your-order-carryout&quot;&gt;Carryout&lt;/a&gt; is not clickable at point (1271, 73). Other element would receive the click: &lt;h1 class=&quot;card__title&quot;&gt;...&lt;/h1&gt;
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:14.666Z&apos;
+System info: host: &apos;DESKTOP-7DIC8F6&apos;, ip: &apos;192.168.0.129&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\jwill\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
+Session ID: f81247ac9b6e9026dd9c7955950e3365
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at dominoFramework.page.DefaultPage.clickCarryoutBtn(DefaultPage.java:60)
+	at dominoFramework.test.DefaultPageTest.ClickCarryOutButton(DefaultPageTest.java:92)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -196,20 +238,39 @@
                   <a name="ClickDeliveryButton">
                   </a> <!-- ClickDeliveryButton -->
                   <span class="method-name">ClickDeliveryButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickMainCoupon">
-                  </a> <!-- ClickMainCoupon -->
-                  <span class="method-name">ClickMainCoupon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickSideBottomCoupon">
-                  </a> <!-- ClickSideBottomCoupon -->
-                  <span class="method-name">ClickSideBottomCoupon</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@data-quid=&apos;start-your-order-delivery&apos;]&quot;}
+  (Session info: chrome=63.0.3239.132)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:14.666Z&apos;
+System info: host: &apos;DESKTOP-7DIC8F6&apos;, ip: &apos;192.168.0.129&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\jwill\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
+Session ID: f81247ac9b6e9026dd9c7955950e3365
+*** Element info: {Using=xpath, value=//a[@data-quid=&apos;start-your-order-delivery&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at dominoFramework.page.DefaultPage.clickDeliveryBtn(DefaultPage.java:45)
+	at dominoFramework.test.DefaultPageTest.ClickDeliveryButton(DefaultPageTest.java:75)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -217,245 +278,290 @@
                   <a name="ClickSideTopCoupon">
                   </a> <!-- ClickSideTopCoupon -->
                   <span class="method-name">ClickSideTopCoupon</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ClickSignInandEarn">
-                  </a> <!-- ClickSignInandEarn -->
-                  <span class="method-name">ClickSignInandEarn</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;https://www.dominos.com/en/&gt; but was:&lt;https://www.dominos.com/en/pages/order/?couponCode_0=9204&amp;partnerCode=DOMINOS&amp;so=hp&amp;panelname=899pan&amp;panelnumber=2&gt;
+	at dominoFramework.test.DefaultPageTest.ClickSideTopCoupon(DefaultPageTest.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dominoFramework.test.CreatePizzaProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterBothEmailFields">
+                  </a> <!-- enterBothEmailFields -->
+                  <span class="method-name">enterBothEmailFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dominoFramework.test.DefaultPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ClickMainCoupon">
+                  </a> <!-- ClickMainCoupon -->
+                  <span class="method-name">ClickMainCoupon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jwill\AppData\Local\Temp\testng-eclipse-821440595\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\jwill\git\SprintDemo\SprintDemo\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;dominoFramework.test.DefaultPageTest&quot; parallel=&quot;methods&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;dominoFramework.test.DefaultPageTest&quot;/&gt;
+      &lt;class name=&quot;dominoFramework.test.DefaultPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;ClickCarryOutButton&quot;/&gt;
+          &lt;include name=&quot;ClickMainCoupon&quot;/&gt;
+          &lt;include name=&quot;ClickDeliveryButton&quot;/&gt;
+          &lt;include name=&quot;ClickSideTopCoupon&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- dominoFramework.test.DefaultPageTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- dominoFramework.test.DefaultPageTest --&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;dominoFramework.test.CreatePizzaProfileTest&quot; parallel=&quot;methods&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;dominoFramework.test.CreatePizzaProfileTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;enterFirstName&quot;/&gt;
+          &lt;include name=&quot;enterEmail&quot;/&gt;
+          &lt;include name=&quot;enterBothEmailFields&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- dominoFramework.test.CreatePizzaProfileTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- dominoFramework.test.CreatePizzaProfileTest --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">dominoFramework.test.DefaultPageTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">dominoFramework.test.CreatePizzaProfileTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ClickSideBottomCoupon')
-data.setCell(0, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(0, 3, 17459);
+data.setCell(0, 1, 'enterFirstName')
+data.setCell(0, 2, 'dominoFramework.test.CreatePizzaProfileTest')
+data.setCell(0, 3, 15175);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ClickCreateOneLink')
-data.setCell(1, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(1, 3, 15231);
+data.setCell(1, 1, 'enterBothEmailFields')
+data.setCell(1, 2, 'dominoFramework.test.CreatePizzaProfileTest')
+data.setCell(1, 3, 12449);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ClickDeliveryButton')
-data.setCell(2, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(2, 3, 13532);
+data.setCell(2, 1, 'enterEmail')
+data.setCell(2, 2, 'dominoFramework.test.CreatePizzaProfileTest')
+data.setCell(2, 3, 6335);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'ClickSideTopCoupon')
+data.setCell(3, 1, 'ClickMainCoupon')
 data.setCell(3, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(3, 3, 11512);
+data.setCell(3, 3, 6127);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'ClickCarryOutButton')
 data.setCell(4, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(4, 3, 10848);
+data.setCell(4, 3, 6074);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'ClickMainCoupon')
+data.setCell(5, 1, 'ClickDeliveryButton')
 data.setCell(5, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(5, 3, 10234);
+data.setCell(5, 3, 6069);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ClickCreateOneLinkNewWindow')
+data.setCell(6, 1, 'ClickSideTopCoupon')
 data.setCell(6, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(6, 3, 8137);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'ClickCreateOneLinkNewTab')
-data.setCell(7, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(7, 3, 8120);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'ClickSignInandEarn')
-data.setCell(8, 2, 'dominoFramework.test.DefaultPageTest')
-data.setCell(8, 3, 6134);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(6, 3, 3415);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">dominoFramework.test.CreatePizzaProfileTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">confirmEmail</span>
+                <br/>
+                <span class="ignored-method-name">confirmPassword</span>
+                <br/>
+                <span class="ignored-method-name">enterPhone</span>
+                <br/>
+                <span class="ignored-method-name">enterLastName</span>
+                <br/>
+                <span class="ignored-method-name">enterPassword</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">dominoFramework.test.DefaultPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ClickCreateOneLink</span>
+                <br/>
+                <span class="ignored-method-name">ClickCreateOneLinkNewTab</span>
+                <br/>
+                <span class="ignored-method-name">ClickSideBottomCoupon</span>
+                <br/>
+                <span class="ignored-method-name">ClickCreateOneLinkNewWindow</span>
+                <br/>
+                <span class="ignored-method-name">ClickSignInandEarn</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">dominoFramework.test.CreatePizzaProfileTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">init</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">dominoFramework.test.DefaultPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">3492 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest</span>
+                <span class="method-start">3494 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ClickCarryOutButton</span>
-                <span class="method-start">4209 ms</span>
+                <span class="method-start">4415 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">15058 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">15685 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ClickCreateOneLink</span>
-                <span class="method-start">18546 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">33778 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">34394 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ClickCreateOneLinkNewTab</span>
-                <span class="method-start">37933 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">46054 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">46662 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ClickCreateOneLinkNewWindow</span>
-                <span class="method-start">50313 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">58451 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">59113 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ClickDeliveryButton</span>
-                <span class="method-start">62101 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">75634 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">76262 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ClickMainCoupon</span>
-                <span class="method-start">79681 ms</span>
+                <span class="method-start">4605 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">89916 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest</span>
-                <span class="method-start">90528 ms</span>
+                <span class="method-start">10493 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ClickSideBottomCoupon</span>
-                <span class="method-start">93539 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ClickDeliveryButton</span>
+                <span class="method-start">10601 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">110999 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest</span>
-                <span class="method-start">111623 ms</span>
+                <span class="method-start">10733 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ClickSideTopCoupon</span>
-                <span class="method-start">115116 ms</span>
+                <span class="method-start">10824 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">126628 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dominoFramework.test.CreatePizzaProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setupTest</span>
-                <span class="method-start">127261 ms</span>
+                <span class="method-start">16703 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest</span>
+                <span class="method-start">16703 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ClickSignInandEarn</span>
-                <span class="method-start">130132 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">enterEmail</span>
+                <span class="method-start">16990 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">enterFirstName</span>
+                <span class="method-start">17298 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTest</span>
+                <span class="method-start">23328 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">enterBothEmailFields</span>
+                <span class="method-start">23599 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">136266 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">36061 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

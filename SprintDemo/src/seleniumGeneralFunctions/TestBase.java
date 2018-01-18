@@ -17,24 +17,19 @@ public class TestBase extends OpenLinks {
 		baseURL = "https://www.google.com/"; // default site	
 	}
 	
-	
+
     //Do the test setup
-    @BeforeMethod
-    public void setupTest () {
-        //Set & Get ThreadLocal Driver with Browser
+	@BeforeSuite
+	public void init() {
 		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
     	TLDriverFactory.setTLDriver();
         driver = TLDriverFactory.getTLDriver().get();
         wait = new WebDriverWait(driver, 15);
-		jse = (JavascriptExecutor)OpenLinks.driver;
-		//driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		baseURL = "https://www.dominos.com/en/";
-		driver.navigate().to(baseURL);
-
-    }
-    
-    @AfterMethod
+		jse = (JavascriptExecutor)OpenLinks.driver;		
+	}
+	
+   
+    @AfterSuite
     public synchronized void tearDown() throws Exception {
     	//driver.close();
     	driver.quit();

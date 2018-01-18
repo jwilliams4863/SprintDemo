@@ -3,15 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dominoFramework.test.DefaultPageTest">
+      <class name="dominoFramework.test.CreatePizzaProfileTest">
         <methods>
-          <include name="ClickSideTopCoupon"/>
+          <include name="enterBothEmailFields"/>
           <include name="tearDown"/>
-          <include name="ClickSideBottomCoupon"/>
+          <include name="init"/>
           <include name="setupTest"/>
-          <include name="ClickMainCoupon"/>
         </methods>
-      </class> <!-- dominoFramework.test.DefaultPageTest -->
+      </class> <!-- dominoFramework.test.CreatePizzaProfileTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

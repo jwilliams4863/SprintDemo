@@ -1,6 +1,9 @@
 package dominoFramework.test;
 
 import static org.testng.AssertJUnit.assertEquals;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import dominoFramework.page.DefaultPage;
@@ -11,21 +14,31 @@ import seleniumGeneralFunctions.TestBase;
 
 public class DefaultPageTest extends TestBase{
 
+	private DefaultPage page;
+	
 	public DefaultPageTest() {
 		baseURL = "https://www.dominos.com/";
-		setWaittime(2000);  // Some of the tests are failing when this is set to 1000 (1 second), 
+		setWaittime(3000);  // Some of the tests are failing when this is set to 1000 (1 second), 
 		//have to find some other way to make sure the page is loaded before the checks fail.
 	}
 	
+    @BeforeMethod
+    public void setupTest () {
+        //Set & Get ThreadLocal Driver with Browser
+		driver.navigate().to(baseURL);
+		page = PageFactory.initElements(driver, DefaultPage.class);
+
+    }
+
 /*
 	Click the side top coupon button and then return to the default page.
 */
 	@Test
 	public void ClickSideTopCoupon() throws InterruptedException {
-
 		WaitFor();
-		DefaultPage.clickSideTop();
-		goBackPage();		
+		page.clickSideTop();
+		//This assertion is meant to fail for demo, it's expecting the URL from the previous page.
+		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		WaitFor();
 	}
 /*
@@ -33,10 +46,9 @@ public class DefaultPageTest extends TestBase{
 */
 	@Test
 	public void ClickSideBottomCoupon() throws InterruptedException {
-
 		WaitFor();
-		DefaultPage.clickSideBottom();
-		goBackPage();		
+		page.clickSideBottom();
+		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		WaitFor();
 	}
 	/*
@@ -44,10 +56,9 @@ public class DefaultPageTest extends TestBase{
 */
 	@Test
 	public void ClickMainCoupon() throws InterruptedException {
-
 		WaitFor();
-		DefaultPage.clickMainCoupon();
-		goBackPage();		
+		page.clickMainCoupon();
+		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		WaitFor();
 	}
 /*
@@ -61,13 +72,9 @@ Click the Delivery button and return to default page.
 
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		
-		DefaultPage.clickDeliveryBtn();
+		page.clickDeliveryBtn();
 		assertEquals("https://www.dominos.com/en/pages/order/#/locations/search/?type=Delivery", driver.getCurrentUrl());
 		
-		goBackPage();
-		waitForLoad();
-		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
-
 		WaitFor();
 	}
 	
@@ -78,16 +85,13 @@ Click the Delivery button and return to default page.
 */
 	@Test
 	public void ClickCarryOutButton() throws InterruptedException {
-
 		WaitFor();
 
 		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 
-		DefaultPage.clickCarryoutBtn();
+		page.clickCarryoutBtn();
 		assertEquals("https://www.dominos.com/en/pages/order/#/locations/search/?type=Carryout", driver.getCurrentUrl());
 
-		goBackPage();
-		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		WaitFor();
 	}
 /*
@@ -99,7 +103,8 @@ Click Sign in and earn button, popup will appear and need to be dealt with.
 	public void ClickSignInandEarn() throws InterruptedException {
 		WaitFor();
 	
-		DefaultPage.clickSignInandEarnBtn();
+		page.clickSignInandEarnBtn();
+		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
 		
 		WaitFor();
 	}
@@ -111,13 +116,13 @@ Click Create One Link to go to create Pizza Profile page
 	public void ClickCreateOneLink() throws InterruptedException {
 		WaitFor();
 
-		DefaultPage.clickCreateOneLink();
+		page.clickCreateOneLink();
 		fillTextBoxID("First_Name", "Bob");
 		fillTextBoxID("First_Name", "Robert");
 		//DefaultPage.fillCreateOneForm();
-		
-		goBackPage();
-		
+	
+		assertEquals("https://www.dominos.com/en/", driver.getCurrentUrl());
+	
 		WaitFor();
 	}
 
@@ -129,7 +134,7 @@ Click Create One Link to go to create Pizza Profile page
 	public void ClickCreateOneLinkNewWindow() throws InterruptedException {
 		WaitFor();
 
-		DefaultPage.clickCreateOneLinkNewWindow();
+		page.clickCreateOneLinkNewWindow();
 		
 		WaitFor();
 	}
@@ -142,7 +147,7 @@ Click Create One Link to go to create Pizza Profile page
 	public void ClickCreateOneLinkNewTab() throws InterruptedException {
 		WaitFor();
 
-		DefaultPage.clickCreateOneLinkNewTab();
+		page.clickCreateOneLinkNewTab();
 			
 		WaitFor();
 	}
